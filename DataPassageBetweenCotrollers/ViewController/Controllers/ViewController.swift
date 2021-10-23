@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var GalerytableView: UITableView!
+    @IBOutlet weak var galeryTableView: UITableView!
     @IBOutlet weak var userTextField: UITextField!
     
     var items : [Galery] = []
@@ -16,15 +16,24 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GalerytableView.backgroundColor = .white
-        GalerytableView.delegate = self
-        GalerytableView.dataSource = self
+       
+        galeryTableView.delegate = self
+        galeryTableView.dataSource = self
         setUp()
     }
     func setUp(){
-        let name1 = Galery(name: "Segue")
-        items.append(name1)
+        let segue = Galery(name: "Segue")
+        let properties = Galery(name: "Properties")
+        items.append(segue)
+        items.append(properties)
   
+    }
+    func dataTransferWithProperty(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "SecondVC") as! SecondViewController
+        destinationVC.mesaj = userTextField.text!
+        self.navigationController?.pushViewController(destinationVC, animated: true)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,7 +50,11 @@ class ViewController: UIViewController {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
-        performSegue(withIdentifier: "toSecondVC", sender: nil)
+        if selectedIndex == 1 {
+            dataTransferWithProperty()
+        }else {
+            performSegue(withIdentifier: "toSecondVC", sender: nil)
+        }
     }
 }
 
@@ -52,7 +65,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.separatorStyle = .none
-        let cell = GalerytableView.dequeueReusableCell(withIdentifier: "PassageCell", for: indexPath) as! SpecialTableViewCell
+        let cell = galeryTableView.dequeueReusableCell(withIdentifier: "PassageCell", for: indexPath) as! SpecialTableViewCell
         cell.titleLabel.text = items[indexPath.row].name
         return cell
     }

@@ -9,14 +9,15 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    @IBOutlet weak var mesajLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
+    
     
     var mesaj : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        mesajLabel.text = mesaj!
+        messageLabel.text = mesaj
     }
     
 
