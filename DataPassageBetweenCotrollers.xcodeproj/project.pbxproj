@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233AC65D27253BAA004D0402 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AC65C27253BA9004D0402 /* Notification.swift */; };
 		233D652A27214E7400B161B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233D652927214E7400B161B8 /* AppDelegate.swift */; };
 		233D652C27214E7400B161B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233D652B27214E7400B161B8 /* SceneDelegate.swift */; };
 		233D652E27214E7400B161B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233D652D27214E7400B161B8 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		233AC65C27253BA9004D0402 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		233D652627214E7400B161B8 /* DataPassageBetweenCotrollers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataPassageBetweenCotrollers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		233D652927214E7400B161B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		233D652B27214E7400B161B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		233AC65E2725423E004D0402 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				233AC65C27253BA9004D0402 /* Notification.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		233D651D27214E7400B161B8 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		233D652827214E7400B161B8 /* DataPassageBetweenCotrollers */ = {
 			isa = PBXGroup;
 			children = (
+				233AC65E2725423E004D0402 /* Extension */,
 				236A1DD42722D7FF00048CE9 /* SpecialCell */,
 				236A1DE4272301D400048CE9 /* ViewController */,
 				233D652927214E7400B161B8 /* AppDelegate.swift */,
@@ -182,6 +193,7 @@
 				236A1DDF2722E1A500048CE9 /* SecondViewController.swift in Sources */,
 				233D652E27214E7400B161B8 /* ViewController.swift in Sources */,
 				236A1DD62722D85300048CE9 /* SpecialTableViewCell.swift in Sources */,
+				233AC65D27253BAA004D0402 /* Notification.swift in Sources */,
 				233D652A27214E7400B161B8 /* AppDelegate.swift in Sources */,
 				233D652C27214E7400B161B8 /* SceneDelegate.swift in Sources */,
 				236A1DD82722D86900048CE9 /* SpecialModel.swift in Sources */,

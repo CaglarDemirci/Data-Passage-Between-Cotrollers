@@ -22,7 +22,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="k61-Ye-CNY"/>
                                 </constraints>
-                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PassageCell" rowHeight="90" id="2UV-Wi-fnv" customClass="SpecialTableViewCell" customModule="DataPassageBetweenCotrollers" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="90"/>
@@ -79,7 +79,7 @@
                                                 <constraint firstItem="jyc-wD-nCA" firstAttribute="top" secondItem="cm0-Pq-y0B" secondAttribute="top" constant="10" id="huP-0L-uMk"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="titleLabel" destination="dnG-dU-JtP" id="XY5-ov-Rh7"/>
                                         </connections>
@@ -128,17 +128,32 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sK5-Jk-gJU">
                                 <rect key="frame" x="166" y="427" width="82.5" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10H-eY-pUX">
+                                <rect key="frame" x="70" y="643" width="274" height="60"/>
+                                <color key="backgroundColor" red="0.78692501780000002" green="0.90003174539999997" blue="0.98824971910000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="fgV-Zu-hZb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Send Notification"/>
+                                <connections>
+                                    <action selector="notificationCenterTapped:" destination="ERv-la-ljT" eventType="touchUpInside" id="aBo-xz-Jgp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oj8-7k-eG9"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="oj8-7k-eG9" firstAttribute="trailing" secondItem="10H-eY-pUX" secondAttribute="trailing" constant="70" id="416-Yq-Zl8"/>
                             <constraint firstItem="sK5-Jk-gJU" firstAttribute="centerY" secondItem="aIH-6b-Fel" secondAttribute="centerY" id="4DY-w9-RsF"/>
+                            <constraint firstItem="oj8-7k-eG9" firstAttribute="bottom" secondItem="10H-eY-pUX" secondAttribute="bottom" constant="159" id="VHa-mC-OtO"/>
                             <constraint firstItem="sK5-Jk-gJU" firstAttribute="centerX" secondItem="aIH-6b-Fel" secondAttribute="centerX" id="VfI-JE-iN5"/>
+                            <constraint firstItem="10H-eY-pUX" firstAttribute="leading" secondItem="oj8-7k-eG9" secondAttribute="leading" constant="70" id="gor-J1-dnQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IyZ-je-fUo"/>
@@ -148,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQn-zs-ReJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2749" y="19"/>
+            <point key="canvasLocation" x="2747.826086956522" y="18.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1wg-oP-3Zq">
@@ -177,6 +192,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

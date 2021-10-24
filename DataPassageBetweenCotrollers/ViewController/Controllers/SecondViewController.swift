@@ -20,7 +20,9 @@ class SecondViewController: UIViewController {
         messageLabel.text = mesaj
     }
     
-
-
+    @IBAction func notificationCenterTapped(_ sender: Any) {
+        
+        NotificationCenter.default.post(name: .myNotificationKey, object: nil)
+    }
 
 }

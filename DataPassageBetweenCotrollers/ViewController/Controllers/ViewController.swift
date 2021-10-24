@@ -20,12 +20,22 @@ class ViewController: UIViewController {
         galeryTableView.delegate = self
         galeryTableView.dataSource = self
         setUp()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(changeBackgroundColor), name: .myNotificationKey , object: nil)
     }
+    @objc func changeBackgroundColor() {
+        self.view.backgroundColor = UIColor.cyan
+        galeryTableView.backgroundColor = UIColor.cyan
+       
+    }
+    
     func setUp(){
         let segue = Galery(name: "Segue")
         let properties = Galery(name: "Properties")
+        let notificationCenter = Galery(name: "Notification Center")
         items.append(segue)
         items.append(properties)
+        items.append(notificationCenter)
   
     }
     func dataTransferWithProperty(){
